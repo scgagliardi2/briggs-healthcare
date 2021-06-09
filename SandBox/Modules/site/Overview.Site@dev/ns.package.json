@@ -1,0 +1,13 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Overview@1.1.2/Templates/overview_shipping.tpl": "Templates/overview_shipping.tpl"
+    }
+}

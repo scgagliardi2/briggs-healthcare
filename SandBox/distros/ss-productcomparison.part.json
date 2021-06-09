@@ -1,0 +1,37 @@
+{
+  "id": "ss-productcomparison",
+  "name": "Product Comparison",
+  "dependencies": [
+    "elbrus-base",
+    "ss-generalconfig"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/ProductComparison": "2.0.4"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "ProductComparison"
+        ]
+      }
+    ],
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "ProductComparison"
+          ]
+        }
+      ]
+    }
+  }
+}

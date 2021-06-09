@@ -1,0 +1,6 @@
+.order-history-list-recordviews-container {
+    .recordviews-actionable-ponumber {
+        @extend .recordviews-actionable-date;
+        text-align: left;
+    }
+}

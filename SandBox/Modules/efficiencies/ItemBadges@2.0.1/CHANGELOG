@@ -1,0 +1,15 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- Vinson Release
+- added ssplibraries entry point file
+- Used ServiceController in services
+- Migrate configuration to vinson
+
+2.0.0
+- Elbrus Release
+- eslint fix
+
+2.0.1
+- Update distro dependencies

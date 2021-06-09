@@ -1,0 +1,53 @@
+.list-header-ponumber-search {
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+    position: relative;
+
+    .list-header-ponumber-input {
+        height: 50px;
+        margin: 0;
+        margin-right: 5px;
+        border: solid 1px #c6c6c6;
+        width: 207px;
+        padding: 10px;
+        padding-right: 35px;
+    }
+
+    .list-header-ponumber-input::placeholder {
+        color: #929292;
+    }
+
+    .list-header-ponumber-clear-icon {
+        @extend .list-header-view-accordion-body-clear-icon;
+        margin-top: 15px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .list-header-ponumber-search-icon {
+    	@extend .fa;
+    	@extend %fa-search;
+        font-size: 20px;
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .list-header-ponumber-search-icon:hover {
+        color: #9c9c9c;
+    }
+}
+
+.list-header-view-accordion-body-clear-icon:hover {
+    color: #8f9da0;
+}
+
+@media (max-width: 991px) {
+    .list-header-ponumber-search {
+        .list-header-ponumber-input {
+            width: 100%;
+        }
+    }
+}

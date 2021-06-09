@@ -1,0 +1,40 @@
+.itemBadge-view-container, .itembadges-relateditem{
+  width: 20%;
+  position: absolute;
+  top: 0;
+}
+
+.item-details-gallery-prev-icon, .item-details-gallery-next-icon{
+  z-index: 1;
+}
+
+.itembadges-badge{
+  @extend .col-md-6;
+  white-space: nowrap;
+  color: $sc-color-tertiary;
+  font-size: $sc-base-font-size;
+  padding: $sc-base-padding;
+}
+
+.itembadges-listitem, .itembadges-relateditem{
+  right: 0;
+}
+
+.itembadges-itemdetail{
+  right: 15px;
+}
+
+.itembadges-badge-row, .itembadges-image-row{
+  @extend .row;
+  margin: 0;
+  display: none;
+}
+
+.itembadges-image-row{
+  width: 100%;
+  text-align: center;
+}
+
+.itembadges-show{
+  display: block;
+}

@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "productComparison",
+    "title": "Product Comparison",
+    "description": "",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "productComparison.enabled": {
+        "group": "commerceSuiteSolution",
+        "type": "boolean",
+        "subtab": "productComparison",
+        "title": "Enable",
+        "default": true
+    },
+    "productComparison.itemProperties": {
+      "group": "commerceSuiteSolution",
+      "type": "array",
+      "subtab": "productComparison",
+      "title": "Item Properties",
+      "docRef": "TODO",
+      "description": "Product Comparison Config",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fieldid" : {
+              "type": "string",
+              "title": "Field ID",
+              "description": "",
+              "mandatory": true
+          },
+          "label" : {
+              "type": "string",
+              "title": "Label",
+              "description": ""
+          },
+          "type" : {
+              "type": "string",
+              "title": "Type",
+              "description": "",
+              "enum": [
+                  "Image",
+                  "Actions",
+                  "Text"
+              ]
+          },
+          "order" : {
+              "type": "integer",
+              "title": "Sort Order",
+              "description": ""
+          },
+          "rowclass": {
+              "type": "string",
+              "title": "CSS Class",
+              "description": ""
+          }
+	    }
+      },
+      "default": [
+        {
+          "fieldid": "_images",
+          "label": "Image Url",
+          "type": "Image",
+          "order": "1",
+          "rowclass": "productcomparison-table-head"
+        },
+        {
+          "fieldid": "_url,internalid",
+          "label": "",
+          "type": "Actions",
+          "order": "2",
+          "rowclass": "productcomparison-table-head"
+        },
+        {
+          "fieldid": "storedisplayname2",
+          "label": "Item Name",
+          "type": "Text",
+          "order": "3",
+          "rowclass": "productcomparison-table-head"
+        },
+        {
+          "fieldid": "pricelevel5_formatted",
+          "label": "Item Price",
+          "type": "Text",
+          "order": "4",
+          "rowclass": ""
+        },
+        {
+          "fieldid": "relateditems_details",
+          "label": "Related Items Details",
+          "type": "Text",
+          "order": "",
+          "rowclass": ""
+        }
+      ]
+    }
+  }
+}

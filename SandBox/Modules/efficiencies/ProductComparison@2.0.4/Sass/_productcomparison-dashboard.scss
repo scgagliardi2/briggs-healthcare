@@ -1,0 +1,86 @@
+.productcompare-dashboard {
+  @extend .container;
+}
+
+.productcompare-dashboard-header {
+  @extend .row;
+  margin-bottom: $sc-base-margin * 2;
+}
+
+.productcompare-dashboard-title {
+  @extend .col-sm-8;
+}
+
+.productcompare-dashboard-buttons {
+  @extend .col-sm-4;
+  margin-top: $sc-base-margin * 2;
+  @media (min-width: $screen-xs-min) {
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+.productcomparison-button-back {
+  @extend .button-small;
+  @extend .button-primary;
+  margin-left: $sc-base-margin * 2;
+}
+
+.productcomparison-button-share {
+  @extend .button-small;
+  @extend .button-secondary;
+}
+
+.productcompare-dashboard-table {
+  @extend .table;
+  @extend .table-responsive;
+  @extend .table-striped;
+}
+
+.productcomparison-table-head {
+  background-color: transparent !important;
+  & td {
+    border-top: none !important;
+  }
+}
+
+.productcompare-dashboard-table-buttons,
+.productcomparison-property-value {
+  text-align: center;
+}
+
+.productcomparison-property-name {
+  color: $sc-color-secondary;
+  font-weight: $sc-font-weight-semibold;
+}
+
+.productcomparison-add {
+  @extend .button-small;
+  @extend .button-primary;
+
+  i {
+      margin-right: $sc-small-margin;
+  }
+}
+
+.productcomparison-button-view {
+  @extend .button-small;
+  @extend .button-tertiary;
+  padding: $sc-base-padding $sc-base-padding * 2;
+  margin: 0 $sc-base-margin;
+}
+
+.productcomparison-button-remove {
+  @extend .button-small;
+  @extend .button-tertiary;
+  padding: $sc-base-padding $sc-base-padding * 2;
+  margin: $sc-base-margin * 2 $sc-base-margin 0 $sc-base-margin;
+  @media (min-width: $screen-xs-min) {
+    margin: 0 $sc-base-margin;
+  }
+}
+
+.productcomparison-thumb {
+  width: 100px;
+  height: 100px;
+}

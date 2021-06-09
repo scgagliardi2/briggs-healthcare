@@ -1,0 +1,102 @@
+{
+    "id": "site",
+    "name": "Site QS B2B - Summit Theme",
+    "dependencies": ["qs-b2b","ss-theme-summit-b2b", "ss-googlecustomerreviews", "ss-googlerecaptcha", "ss-lookbook", "ss-itembadges"],
+    "endpoint": "true",
+    "modules": {
+        "site/Balance.Site": "dev",
+        "site/BaseSassStyles.Site": "dev",
+        "site/Header.Site": "dev",
+        "site/CustomStylesB2B.Site": "dev",
+        "site/Footer.Site": "dev",
+        "site/Newsletter.Site": "dev",
+        "suitecommerce/Newsletter": "2.1.0",
+        "site/ItemRelations.Site": "dev",
+        "site/ProductList.Site": "dev",
+        "site/MenuTree.Site": "dev",
+        "site/Invoice.Site": "dev",
+        "site/CreditCard.Site": "dev",
+        "site/Case.Site": "dev",
+        "site/MyAccountApplication.Site": "dev",
+        "site/Home.Site": "dev",
+        "site/ProductDetails.Site": "dev",
+        "site/PacejetIntegration": "dev",
+        "site/CaseFormFrontend": "dev",
+        "site/Address.Site": "dev",
+        "site/Overview.Site": "dev",
+        "site/OrderWizard.Module.PaymentMethod.Site": "dev",
+        "Site/ListHeader.Site": "dev",
+        "site/OrderHistory.Site": "dev",
+        "site/Profile.Site": "dev"
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+                    "Newsletter",
+                    "CaseFormFrontend",
+                    "Address.Details.View.Site",
+                    "Home.View.FixSearch"
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+                    "Newsletter",
+                    "Address.Details.View.Site",
+                    "Address.Router.NoEdit",
+                    "Overview.Shipping.NoEdit.View",
+                    "Custom.OrderHistory.List.View",
+                    "Custom.OrderHistory.Collection",
+                    "ListHeader.View.POnumber",
+                    "Profile.Information.View.Site"
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+                    "Newsletter",
+                    "Address.Details.View.Site",
+                    "Address.Router.NoEdit",
+                    "OrderWizard.Module.PaymentMethod.Selector.Site"
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+                "Newsletter.ServiceController",
+                "Pacejet",
+                "Custom.OrderHistory.Model",
+                "Custom.OrderHistory.ServiceController",
+                "CaseFormFrontend.Model",
+                "CaseFormFrontend.ServiceController"
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                        "CaseFormFrontend"
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                        "Newsletter",
+                        "OrderHistory.Site",
+                        "ListHeader.Site",
+                        "MyAccountApplication.Site"
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                        "Newsletter"
+                    ]
+                }
+            ]
+        }
+    }
+}

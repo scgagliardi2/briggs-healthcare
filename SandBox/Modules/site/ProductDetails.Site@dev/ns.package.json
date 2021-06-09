@@ -1,0 +1,9 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/*.scss"
+        ]
+    },
+    "overrides": {
+    }
+}

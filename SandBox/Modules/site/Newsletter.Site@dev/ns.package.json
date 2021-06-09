@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Newsletter@2.1.0/Sass/_newsletter.scss": "Sass/_newsletter.scss"
+    }
+}

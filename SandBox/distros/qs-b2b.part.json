@@ -1,0 +1,27 @@
+{
+  "id": "qs-b2b",
+  "name": "Quickstart Basic",
+  "dependencies": [
+    "boilerplate",
+    "ss-backinstock",
+    "ss-customersegments",
+    "ss-displayproductleadtime",
+    "ss-duplicatecustomermanagement",
+    "ss-infinitescroll",
+    "ss-inventorydisplay",
+    "ss-itembadges",
+    "ss-localizationpatch",
+    "ss-matrixmultiadd",
+    "ss-productcomparison",
+    "ss-sizechart",
+    "ss-b2bextensions",
+    "ss-about-us",
+    "ss-contactuslandingpage"
+  ],
+  "modules": {},
+  "tasksConfig": {
+    "ssp-libraries": {
+      "dependencies": []
+    }
+  }
+}

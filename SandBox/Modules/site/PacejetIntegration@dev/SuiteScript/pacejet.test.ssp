@@ -1,0 +1,5 @@
+<%
+var Pacejet = require('Pacejet.Model');
+
+response.write(JSON.stringify(Pacejet.doTestRequest(request.getParameter('nocache') == 'T', false, request.getParameter('send') == 'T')));
+%>

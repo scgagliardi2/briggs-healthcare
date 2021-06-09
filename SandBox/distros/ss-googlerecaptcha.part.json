@@ -1,0 +1,62 @@
+{
+  "id": "ss-googlerecaptcha",
+  "name": "GoogleRecaptcha",
+  "dependencies": ["elbrus-base", "ss-generalconfig"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/GoogleRecaptcha": "1.1.2",
+    "efficiencies/ProductReviewGoogleRecaptcha": "1.0.1",
+    "efficiencies/ProductEditReviewGoogleRecaptcha": "1.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "GoogleRecaptcha",
+          "ProductReviewGoogleRecaptcha",
+          "ProductEditReviewGoogleRecaptcha"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": []
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": []
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "GoogleRecaptcha.Model",
+        "ProductReviewGoogleRecaptcha.Model",
+        "ProductEditReviewGoogleRecaptcha.Model"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "ProductReviewGoogleRecaptcha",
+            "ProductEditReviewGoogleRecaptcha"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": []
+        },
+        {
+          "name": "Checkout",
+          "dependencies": []
+        }
+      ]
+    }
+  }
+}

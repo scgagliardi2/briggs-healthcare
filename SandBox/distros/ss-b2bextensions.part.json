@@ -1,0 +1,59 @@
+{
+  "id": "ss-b2bextensions",
+  "name": "B2B Extensions",
+  "dependencies": [
+    "elbrus-base"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution"
+  },
+  "modules": {
+    "efficiencies/B2BExtensions": "1.1.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "B2BExtensions"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "B2BExtensions"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "B2BExtensions"
+        ]
+      }
+    ],
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "B2BExtensions"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "B2BExtensions"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "B2BExtensions"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "ss-customersegments",
+  "name": "Customer Segments",
+  "dependencies": [
+    "elbrus-base",
+    "ss-environmentfiles",
+    "ss-sspfiles",
+    "ss-generalconfig",
+    "ss-efcore",
+    "ss-postcontexthook"
+  ],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/CustomerSegments": "2.0.3",
+    "efficiencies/CMSMerchandisingZonesInitialization": "2.0.0"
+  },
+  "tasksConfig": {
+    "local": {
+      "https": {
+        "port": 7778,
+        "key": "SupportScripts/local-https/key.pem",
+        "cert": "SupportScripts/local-https/cert.pem"
+      }
+    },
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "CMSMerchandisingZonesInitialization",
+          "CustomerSegments"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "CustomerSegments"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "CustomerSegments"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "CustomerSegments.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "CustomerSegments"
+          ]
+        },
+        {
+          "name": "MyAccount",
+          "dependencies": [
+            "CustomerSegments"
+          ]
+        },
+        {
+          "name": "Checkout",
+          "dependencies": [
+            "CustomerSegments"
+          ]
+        }
+      ]
+    }
+  }
+}

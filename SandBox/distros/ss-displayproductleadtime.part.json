@@ -1,0 +1,67 @@
+{
+  "id": "ss-displayproductleadtime",
+  "name": "DisplayProductLeadTime",
+  "dependencies": ["elbrus-base", "ss-efcore"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/DisplayProductLeadTime": "2.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "DisplayProductLeadTime"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "DisplayProductLeadTime.Model",
+        "DisplayProductLeadTime.ServiceController"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "DisplayProductLeadTime"
+          ]
+        }
+      ]
+    },
+    "backend-suitescript": {
+      "amdConfig": {
+        "paths": {
+          "Backbone.Validation": "backbone-validation.server.custom"
+        },
+        "shim": {
+          "Backbone.Validation": {
+            "exports": "Backbone.Validation"
+          }
+        },
+        "findNestedDependencies": true,
+        "map": {
+          "SC.Model": {
+            "Application": "Application.Backend"
+          },
+          "Utils": {
+            "Application": "Application.Backend"
+          },
+          "DisplayProductLeadTime.Model": {
+            "Application": "Application.Backend"
+          },
+          "EF - DPLT - SL - Display Product Lead Time Service": {
+            "Application": "Application.Backend"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+
+.b2b-extension-sku-label {
+    @extend .product-line-sku-label;
+}
+
+.b2b-extension-sku-value {
+    @extend .product-line-sku-value;
+}
+
+.b2b-extension-sku-container {}

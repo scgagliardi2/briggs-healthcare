@@ -1,0 +1,20 @@
+{
+  "gulp":{
+    "module_name": "ProductReviewGoogleRecaptcha",
+     "javascript": [
+      "JavaScript/*.js"
+    ],
+    "ssp-libraries": [
+      "SuiteScript/*.js"
+    ],
+    "services": [
+      "SuiteScript/GoogleRecaptcha.Service.ss"
+    ],
+    "templates": [
+      "Templates/*.tpl"
+    ],
+    "sass": [
+      "Sass/*.scss"
+    ]
+  }
+}
