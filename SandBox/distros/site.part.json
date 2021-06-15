@@ -20,14 +20,14 @@
         "site/MyAccountApplication.Site": "dev",
         "site/Home.Site": "dev",
         "site/ProductDetails.Site": "dev",
-        "site/PacejetIntegration": "dev",
         "site/CaseFormFrontend": "dev",
         "site/Address.Site": "dev",
         "site/Overview.Site": "dev",
         "site/OrderWizard.Module.PaymentMethod.Site": "dev",
         "Site/ListHeader.Site": "dev",
         "site/OrderHistory.Site": "dev",
-        "site/Profile.Site": "dev"
+        "site/Profile.Site": "dev",
+        "site/OrderWizard.Module.Shipmethod.Site":"dev"
     },
     "tasksConfig": {
         "javascript": [
@@ -66,11 +66,11 @@
         "ssp-libraries": {
             "dependencies": [
                 "Newsletter.ServiceController",
-                "Pacejet",
                 "Custom.OrderHistory.Model",
                 "Custom.OrderHistory.ServiceController",
                 "CaseFormFrontend.Model",
-                "CaseFormFrontend.ServiceController"
+                "CaseFormFrontend.ServiceController",
+                "ShippingCalculator"
             ]
         },
         "sass": {
@@ -93,7 +93,8 @@
                 {
                     "name": "Checkout",
                     "dependencies": [
-                        "Newsletter"
+                        "Newsletter",
+                        "OrderWizard.Module.Shipmethod.Site"
                     ]
                 }
             ]
