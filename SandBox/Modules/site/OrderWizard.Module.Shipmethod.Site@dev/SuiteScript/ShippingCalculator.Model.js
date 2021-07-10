@@ -7,7 +7,7 @@ define("ShippingCalculator.Model", [
 
   return SCModel.extend({
     name: "ShippingCalculator.Model",
-    getShippingCost: function(orderTotal) {
+    getShippingCost: function(orderTotal,shipmethod) {
       var response;
       var shippingRate;
 
@@ -15,11 +15,22 @@ define("ShippingCalculator.Model", [
       var zoneCode = JSON.parse(customFields.custentityzone_code);
 
       nlapiLogExecution("DEBUG", "zone Code", JSON.stringify(customFields));
+	  
 
       var filters = [];
       filters.push(
         new nlobjSearchFilter("custrecord_briggs_p_code", null, "is", zoneCode)
       );
+	  
+	  if(!shipmethod){
+		 shipmethod = "@NONE@";
+	  }
+	  //nlapiLogExecution("DEBUG", "shipmethod", shipmethod);
+	  filters.push(
+		new nlobjSearchFilter("custrecord_shipping_method", null, "anyof", shipmethod)
+	  );
+	  
+	 
 
       var columns = [];
       columns.push(new nlobjSearchColumn("custrecord_start_threshold_amount"));

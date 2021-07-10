@@ -5,9 +5,51 @@
 	may use this code subject to the terms that govern your access and use.
 }}
 
+<div class="order-wizard-shipmethod-module">
+	{{#if showTitle}}
+		<h3 class="order-wizard-shipmethod-module-title">
+			{{title}}
+		</h3>
+	{{/if}}
+	
+	{{#if showEnterShippingAddressFirst}}
+		<div class="order-wizard-shipmethod-module-message">
+			{{translate 'Warning: Please enter a valid shipping address first'}}
+		</div>
+	{{else}}
+		{{#if showLoadingMethods}}
+			<div class="order-wizard-shipmethod-module-message">
+				{{translate 'Loading...'}}
+			</div>
+		{{else}}
+			{{#if hasShippingMethods}}
+				
+				<select data-action="select-delivery-option" data-action="edit-module" class="order-wizard-shipmethod-module-option-select">
+					<option>{{translate 'Select a delivery method'}}</option>
+					{{#each shippingMethods}}
+						<option 
+						{{#if isActive}}selected{{/if}} 
+						value="{{internalid}}"
+						id="delivery-options-{{internalid}}">
+							{{!--rate_formatted--}} {{name}}
+						</option>
+					{{/each}}
+				</select>
+				
+			{{else}}
+				<div class="order-wizard-shipmethod-module-message">
+					{{translate 'Warning: No Delivery Methods are available for this address'}}
+				</div>
+			{{/if}}
+		{{/if}}
+	{{/if}}
+</div>
+{{!--
 <div class="order-wizard-shipmethod-module shipping-message">
 	For Expedited Shipping costs, please contact Briggs Healthcare for a freight quote.
 </div>
+--}}
+
 
 
 
