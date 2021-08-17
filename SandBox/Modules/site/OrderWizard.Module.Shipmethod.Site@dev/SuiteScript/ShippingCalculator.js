@@ -3,20 +3,26 @@ define("ShippingCalculator", [
   "ShippingCalculator.Model",
   "underscore",
   "Utils",
-], function(Application, ShippingCalculatorModel, _, Utils) {
+  "SC.Models.Init"
+], function(Application, ShippingCalculatorModel, _, Utils,ModelsInit) {
   Application.on("after:LiveOrder.get", function(Model, response) {
-    if (session.isLoggedIn2()) {
+    if (ModelsInit.session.isLoggedIn2()) {
       var subtotal = response.summary.subtotal;
 	  
 	  var shipmethod = _.has(response,'shipmethod')? response.shipmethod : '';
 	  
       var shippingCalculatorResponse =
         ShippingCalculatorModel.getShippingCost(subtotal,shipmethod);
-		
+	
       var shippingCost = shippingCalculatorResponse.shippingCost || 0;
       response.summary.shippingcost = parseFloat(shippingCost);
       response.summary.shippingcost_formatted =
         Utils.formatCurrency(shippingCost);
+		
+	
+	if(Utils.isInCheckout()){
+		response.options.custbody_ag_shipping_cost_custom = String(response.summary.shippingcost);
+	}
 
       var taxtotal = response.summary.taxtotal;
       var newTax = 0.0;
