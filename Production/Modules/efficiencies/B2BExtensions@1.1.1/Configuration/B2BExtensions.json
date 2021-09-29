@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "quickStart.bTobExtensions.enabled": {
+            "group": "commerceSuiteSolution",
+            "type": "boolean",
+            "subtab": "quickStart",
+            "title": "Enable extensions",
+            "description": "Enable module features",
+            "default": true
+        }
+    }
+}

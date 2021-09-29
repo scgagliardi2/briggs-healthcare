@@ -1,0 +1,13 @@
+1.0.0
+- Initial Release (MontBlanc)
+
+1.1.0
+- Vinson Release
+- Migrate configuration to vinson
+
+1.1.1
+- Elbrus Release
+- ESlint fix
+
+1.1.2
+- Update distro dependencies

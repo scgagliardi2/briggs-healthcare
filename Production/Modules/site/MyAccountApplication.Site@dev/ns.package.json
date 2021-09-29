@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "themes/summit@1.3.0/overrides/Theme_MyAccountApplicationB2B@theme/Sass/_qs-myaccount-layout.scss": "Sass/_myaccount-layout.scss"
+    }
+}

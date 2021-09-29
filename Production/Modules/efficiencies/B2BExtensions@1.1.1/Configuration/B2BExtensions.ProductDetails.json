@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "quickStart.bTobExtensions.displayWithSKU": {
+            "group": "commerceSuiteSolution",
+            "subtab": "quickStart",
+            "type": "array",
+	    "title": "Additional item fields to display with SKU",
+	    "description": "Additional item field values to display with the SKU",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Item Field Id",
+                        "description": "Internal id of the field.",
+                        "mandatory": true
+                    },
+                    "label": {
+                        "type": "string",
+                        "title": "Label",
+                        "description": "Label to display."
+                    }
+                }
+            },
+            "default": [
+                {
+                    "id": "upccode",
+                    "label": "UPC CODE"
+                },
+                {
+                    "id": "manufacturer",
+                    "label": "MANUFACTURER"
+                },
+                {
+                    "id": "mpn",
+                    "label": "MPN"
+                },
+                {
+                    "id": "countryofmanufacture",
+                    "label": "MANUFACTURER COUNTRY"
+                },
+                {
+                    "id": "weight",
+                    "label": "ITEM WEIGHT"
+                }
+            ]
+        }
+    }
+}

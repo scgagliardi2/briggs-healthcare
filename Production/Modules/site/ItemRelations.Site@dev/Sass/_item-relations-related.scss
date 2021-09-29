@@ -1,0 +1,154 @@
+/*
+	© 2016 NetSuite Inc.
+	User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+	provided, however, if you are an authorized user with a NetSuite account or log-in, you
+	may use this code subject to the terms that govern your access and use.
+*/
+
+.item-relations-related {
+	position: relative;
+}
+
+.item-relations-related .bx-controls-direction {
+    text-align: right;
+	margin-bottom: $sc-base-margin * 3;
+}
+.item-relations-related h3 {
+    margin-bottom: $sc-base-margin * 8;
+}
+
+.item-relations-related .global-views-star-rating {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+// .item-relations-related-row{
+// 	@extend .row-fuild;
+// }
+// merchzone aligned
+.item-relations-related{
+    .bx-wrapper{
+        position: relative;
+        @media(min-width: $sc-mobile-min-with){
+            width: 285px !important;
+        }
+        @media(min-width: $sc-mobile-middle-with){
+            width: 345px !important;
+        }
+        @media(min-width: $screen-sm-min){
+            width: 735px !important;
+        }
+        @media(min-width: $screen-md-min){
+            width: 940px !important;
+        }
+        @media(min-width: $screen-lg-min){
+            width: 1140px !important;
+            margin: 0 auto;
+        }
+        .bx-controls{
+            position: relative;
+            top: -160px;
+        }
+    }
+    .bx-viewport{
+        //@media(min-width: $sc-mobile-min-with){
+            height: auto;
+            margin: 0px auto;
+            width: 95% !important;
+        //}
+        @media(min-width: $sc-mobile-min-with) and (max-width: $sc-mobile-xmiddle-with - 1){
+            width: 100% !important;
+        }
+
+        @media(min-width: $screen-md-min){
+            width: 100% !important;
+        }
+    }
+
+    .item-relations-row{
+        left: -15px;
+        .item-relations-cell{
+            .item-views-related-item-thumbnail{
+                min-height: 250px;
+                max-height: 250px;
+                position: relative;
+            }
+            .item-views-related-item-title{
+                min-height: 56px;
+                padding: $sc-base-padding*3 $sc-base-padding 0;
+            }
+            @media(min-width: $sc-mobile-min-with){
+                width: 303px !important;
+            }
+            @media(min-width: $sc-mobile-middle-with){
+                width: 330px !important;
+            }
+            @media(min-width: $sc-mobile-xmiddle-with){
+                width: 306px !important;
+            }
+            @media(min-width: $screen-sm-min){
+                width: 219px !important;
+            }
+            @media(min-width: $screen-md-min){
+                width: 223px !important;
+            }
+            @media(min-width: $screen-lg-min){
+                width: 274px !important;
+            }
+            @media(min-width: $sc-tablet-landscape-widht){
+                margin-left: $sc-base-margin + 3;
+                margin-right: $sc-base-margin + 3;
+            }
+        }
+        .item-views-price-lead{
+            color: #000;
+        }
+        .item-views-related-item-thumbnail{
+            img{
+                max-height: 200px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 92%;
+            }
+            //min-height: auto !important;
+            padding: $sc-base-padding*4 $sc-base-padding*2;
+        }
+        @media(min-width: $sc-mobile-min-with){
+            left: -16px !important;
+        }
+        @media(min-width: $sc-mobile-middle-with){
+            left: -350px !important;
+        }
+        @media(min-width: $sc-mobile-xmiddle-with){
+            left: -2px !important;
+        }
+        @media(min-width: $screen-sm-min){
+            left: -3px !important;
+        }
+        @media(min-width: $screen-md-min){
+            left: -16px !important;
+        }
+        @media(min-width: $sc-tablet-landscape-widht){
+            left: -10px !important;
+        }
+    } 
+    .bx-controls{
+        .item-details-carousel-prev{
+            top: 41%;
+            left: 0; 
+            @media(min-width: $screen-xlg-min){
+                left: -50px; 
+            }
+        }
+        .item-details-carousel-next{
+            top: 41%;
+            right: 0px;
+            @media(min-width: $screen-xlg-min){
+                right: -50px;
+            }    
+        }
+    }
+}
+// merchzone aligned

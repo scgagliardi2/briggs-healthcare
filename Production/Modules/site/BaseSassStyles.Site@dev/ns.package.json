@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+    	"themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/variables/_qs-colors.scss" : "Sass/variables/_colors.scss",
+    	"themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/variables/_qs-theme.scss" : "Sass/variables/_theme.scss",
+    	"themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/atoms/_qs-buttons.scss" : "Sass/atoms/_buttons.scss",
+        "themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/atoms/_qs-forms.scss" : "Sass/atoms/_forms.scss",
+        "themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/atoms/_qs-typography.scss" : "Sass/atoms/_typography.scss",
+        "themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/molecules/_qs-search.scss" : "Sass/molecules/_search.scss",
+        "themes/summit@1.3.0/overrides/Theme_BaseSassStylesB2B@theme/Sass/molecules/_qs-list-header.scss": "Sass/molecules/_list-header.scss",
+        "suitecommerce/BaseSassStyles@2.0.0/Sass/molecules/_tabs.scss" : "Sass/molecules/_tabs.scss"
+    }
+}

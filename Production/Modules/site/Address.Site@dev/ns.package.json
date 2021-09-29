@@ -1,0 +1,13 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "templates": [
+            "Templates/*.tpl"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Address@2.4.0/Templates/address_details.tpl": "Templates/address_details.tpl"
+    }
+}

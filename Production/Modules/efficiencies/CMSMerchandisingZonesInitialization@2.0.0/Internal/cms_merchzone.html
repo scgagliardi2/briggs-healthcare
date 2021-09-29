@@ -1,0 +1,83 @@
+<ul data-type="merch-zone-slider" class="merch-zone-slider item-relations-row">
+        <% _.each(data.items, function (item, index) { %>
+            <% var item_url = '/'+ item.urlcomponent;
+             var itemName = item.storedisplayname2 || item.name || item.displayname || item.itemid;
+             var noItem = item.itemid;
+             var details_object = item.onlinecustomerprice_detail || {}
+                ,   result =  {
+                                price: details_object.onlinecustomerprice
+                            ,   price_formatted: details_object.onlinecustomerprice_formatted
+                            }
+
+            if (details_object.priceschedule && details_object.priceschedule.length)
+            {
+                var quantity = 1,
+                    price_schedule, min, max;
+
+                for (var i = 0; i < details_object.priceschedule.length; i++)
+                {
+                    price_schedule = details_object.priceschedule[i];
+                    min = parseInt(price_schedule.minimumquantity, 10);
+                    max = parseInt(price_schedule.maximumquantity, 10);
+
+                    if ((min <= quantity && quantity < max) || (min <= quantity && !max))
+                    {
+                        result  = {
+                            price: price_schedule.price
+                        ,   price_formatted: price_schedule.price_formatted
+                        };
+                    }
+                }
+            }
+
+             %>
+
+            <li class="item-relations-cell">
+                <div>
+                    <a class="item-views-related-item-thumbnail" href="<%= item_url %>">
+                        <img src="<%= item.cms.image.url %>" alt="<%= item.cms.image.alt_text %>" />
+                    </a>
+                    <% if (itemName) { %>
+                        <h3 class="item-cell-title">
+                            <b>
+                                <a href="<%= item_url %>"><%= itemName %></a>
+                            </b>
+                        </h3>
+                    <% } else { %>
+                        <a class="btn btn-small btn-primary btn-expanded"  href="<%= item_url %>">See more</a>
+                    <% } %>
+                    <a href="<%= item_url %>" style="font-size: 15px; font-weight: 600; color: #f0a30a;"><%= result.price_formatted %></a>
+                    <% if (itemName) { %>
+                        <h4 class="item-cell-title">
+                            <a href="<%= item_url %>"><span><%= noItem %></span></a>
+                        </h4>
+                    <% } %>
+                </div>
+            </li>
+        <% }); %>
+W</ul>
+<script type="text/javascript">Backbone && Backbone.Events.trigger('cms:custom:merchzones-rendered',data);</script>
+
+
+<% if (typeof nsglobal === 'undefined') { %>
+    <script type="text/javascript">
+        jQuery('.merch-zone-slider').bxSlider({
+            minSlides: 2
+        ,   slideWidth: 250
+        ,   maxSlides: 4
+        ,   forceStart: true
+        ,   pager: false
+        ,   touchEnabled: true
+        ,   preloadImages: 'all'
+        ,   slideMargin: 15
+        ,   auto: true
+        ,   pause: 5000
+        ,   useCSS: true
+        ,   autoHover: true
+        ,   infiniteLoop: true
+        ,   nextText: '<a class="item-details-carousel-next"><span class="control-text">' + _('next').translate() + '</span> <i class="carousel-next-arrow"></i></a>'
+        ,   prevText: '<a class="item-details-carousel-prev"><i class="carousel-prev-arrow"></i> <span class="control-text">' + _('prev').translate() + '</span></a>'
+        ,   controls: true
+        });
+    </script>
+<% }%>

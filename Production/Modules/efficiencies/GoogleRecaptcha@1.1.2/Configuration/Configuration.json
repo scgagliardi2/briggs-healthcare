@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "googleReCaptcha",
+    "title": "Google Recaptcha",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "googleReCaptcha.sitekey": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleReCaptcha",
+      "title": "Site Key",
+      "default": "6LegtaIUAAAAAMTuvjC-jNE7Y6FndsbWHaAzK6Vm"
+    },
+    "googleReCaptcha.serverkey": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleReCaptcha",
+      "title": "Server Key",
+      "default": "6LegtaIUAAAAAKcqsLQJDld6A-tTsE_uwMfrjmZ4"
+    },
+    "googleReCaptcha.verifyUrl": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleReCaptcha",
+      "title": "Verify Url",
+      "default": "https://www.google.com/recaptcha/api/siteverify"
+    },
+    "googleReCaptcha.theme": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleReCaptcha",
+      "title": "Theme",
+      "default": "light"
+    },
+    "googleReCaptcha.apiUrl": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleReCaptcha",
+      "title": "API Url",
+      "default": "https://www.google.com/recaptcha/api.js"
+    }
+  }
+}

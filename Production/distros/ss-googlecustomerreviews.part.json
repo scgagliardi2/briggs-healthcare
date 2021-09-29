@@ -1,0 +1,36 @@
+{
+  "id": "ss-googlecustomerreviews",
+  "name": "GoogleCustomerReviews",
+  "dependencies": ["elbrus-base", "ss-generalconfig"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/GoogleCustomerReviews": "1.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "GoogleCustomerReviews"
+        ]
+      },
+      {
+        "entryPoint": "SC.MyAccount.Starter",
+        "dependencies": [
+          "GoogleCustomerReviews"
+        ]
+      },
+      {
+        "entryPoint": "SC.Checkout.Starter",
+        "dependencies": [
+          "GoogleCustomerReviews"
+        ]
+      }
+    ]
+  }
+}

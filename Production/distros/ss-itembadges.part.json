@@ -1,0 +1,39 @@
+{
+  "id": "ss-itembadges",
+  "name": "ItemBadges",
+  "dependencies": ["elbrus-base", "ss-generalconfig", "ss-efcore"],
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "modules": {
+    "efficiencies/ItemBadges": "2.0.1"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "ItemBadges"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": [
+        "ItemBadges.EntryPoint"
+      ]
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "ItemBadges"
+          ]
+        }
+      ]
+    }
+  }
+}

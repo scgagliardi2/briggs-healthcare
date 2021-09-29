@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "customerSegments",
+    "title": "Customer Segments",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "customerSegments.guestUser": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "customerSegments",
+      "title": "Guest user can see all item",
+      "default": true
+    },
+    "customerSegments.defaultGroup": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "customerSegments",
+      "title": "Default group"
+    },
+    "customerSegments.defaultGroupId": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "customerSegments",
+      "title": "Default group ID"
+    }
+  }
+}

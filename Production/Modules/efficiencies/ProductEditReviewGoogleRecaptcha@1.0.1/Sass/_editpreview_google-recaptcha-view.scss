@@ -1,0 +1,24 @@
+/*
+    © 2015 NetSuite Inc.
+    User may not copy, modify, distribute, or re-bundle or otherwise make available this code;
+    provided, however, if you are an authorized user with a NetSuite account or log-in, you
+    may use this code subject to the terms that govern your access and use.
+*/
+.google-recaptcha-view{
+    @extend .box-column;
+}
+.google-recaptcha-view-title{
+    margin-bottom: $sc-medium-margin;
+}
+.google-recaptcha-view-message{
+    @extend .message-info;
+}
+.google-recaptcha-view-form-content-group-label {
+    @extend .input-label;
+    display: inline-block;
+    margin-top: $sc-base-margin * 4;
+    margin-bottom: $sc-base-margin;
+}
+.google-recaptcha-view-form-content-required {
+    @extend .input-required;
+}

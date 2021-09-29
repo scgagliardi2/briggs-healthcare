@@ -1,0 +1,17 @@
+{
+    "gulp": {
+        "javascript": [
+            "JavaScript/*.js"
+        ],
+        "templates": [
+            "Templates/*.tpl"
+        ],
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Profile@3.0.0/Sass/_profile-information.scss": "Sass/_profile-information.scss",
+        "suitecommerce/Profile@3.0.0/Templates/profile_information.tpl": "Templates/profile_information.tpl"
+    }
+}

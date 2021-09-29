@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "caseformfrontend",
+        "title": "Online Case Form URL",
+        "group": "integrations"
+    },
+    "properties": {
+        "caseformfrontend.BriggsContactUs": {
+            "group": "integrations",
+            "subtab": "caseformfrontend",
+            "type": "string",
+            "title": "Briggs - Contact Us",
+            "default": ""
+        },
+        "caseformfrontend.BriggsRequestCatalog": {
+            "group": "integrations",
+            "subtab": "caseformfrontend",
+            "type": "string",
+            "title": "Briggs - Request a Catalog",
+            "default": ""
+        },
+        "caseformfrontend.HSContactUs": {
+            "group": "integrations",
+            "subtab": "caseformfrontend",
+            "type": "string",
+            "title": "HS - Contact Us",
+            "default": ""
+        },
+        "caseformfrontend.HSWarrantyRegistration": {
+            "group": "integrations",
+            "subtab": "caseformfrontend",
+            "type": "string",
+            "title": "HS - Warranty Registration",
+            "default": ""
+        }
+    }
+}

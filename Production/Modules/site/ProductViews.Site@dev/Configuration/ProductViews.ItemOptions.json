@@ -1,0 +1,11 @@
+{
+    "type": "object",
+
+    "modifications" : [
+        {
+            "target": "$.resource.template.productivew-option-selector",
+            "action": "add",
+            "value": "product_views_option_empty.tpl"
+        }
+    ]
+}

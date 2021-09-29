@@ -1,0 +1,41 @@
+{
+  "id": "ss-matrixmultiadd",
+  "name": "MatrixMultiAdd",
+  "folders": {
+    "modules": "Modules",
+    "distribution": "bin/LocalDistribution",
+    "deploy": "bin/DeployDistribution",
+    "release": "bin/ReleaseDistribution"
+  },
+  "dependencies": [
+      "elbrus-base",
+      "ss-generalconfig",
+      "ss-efcore"
+  ],
+  "modules": {
+    "efficiencies/MatrixMultiAdd": "2.1.2"
+  },
+  "tasksConfig": {
+    "javascript": [
+      {
+        "entryPoint": "SC.Shopping.Starter",
+        "dependencies": [
+          "MatrixMultiAdd"
+        ]
+      }
+    ],
+    "ssp-libraries": {
+      "dependencies": []
+    },
+    "sass": {
+      "applications": [
+        {
+          "name": "Shopping",
+          "dependencies": [
+            "MatrixMultiAdd"
+          ]
+        }
+      ]
+    }
+  }
+}

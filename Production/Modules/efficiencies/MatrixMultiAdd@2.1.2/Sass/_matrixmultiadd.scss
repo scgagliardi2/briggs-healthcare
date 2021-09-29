@@ -1,0 +1,204 @@
+.matrix-multi-add-table-wrapper {
+    @extend .table-responsive;
+}
+.matrix-multi-add-table {
+    @extend .table;
+}
+.matrix-multi-add-cols-table {
+    @extend .table;
+    & .matrix-multi-add-quantity {
+        width: 180px;
+    }
+}
+.matrix-multi-add-table-overflow {
+    overflow-y: scroll;
+}
+.matrix-multi-add-row:hover {
+    background-color: $table-bg-hover;
+}
+.matrix-multi-add-table-head {
+    @extend .table;
+    margin-bottom: 0;
+}
+.matrix-multi-add-table-cols-title {
+    color: $sc-color-light-copy;
+    border-bottom: 1px solid $table-border-color;
+    font-size: $sc-base-font-size;;
+    text-transform: uppercase;
+    padding: $sc-base-padding * 1.6;
+}
+.matrix-multi-add-table-title,
+.matrix-multi-add-first-cell {
+    min-width: 125px;
+    @media (min-width: $screen-md-min) {
+        width: 180px;
+    }
+}
+.matrix-multi-add-table-body {
+    border-top: 1px !important;
+}
+.matrix-multi-add-quantity-pricing-table {
+    @extend .table;
+    @extend .table-condensed;
+    font-size: $sc-small-font-size;
+    text-align: center;
+    margin-bottom: 0;
+    background-color: transparent !important;
+    & .matrix-multi-add-quantity-pricing-table-row td {
+        border: none !important;
+        width: 50%;
+    }
+}
+.matrix-multi-add-details {
+    cursor: pointer;
+    cursor: hand;
+}
+.matrix-multi-add-pricing td {
+    padding-top: 0 !important;
+    border: none !important;
+}
+.matrix-multi-add-price {
+    text-align: center;
+    font-size: $sc-small-font-size;
+}
+.matrix-multi-add-collapse {
+    @extend .collapse;
+}
+.matrix-multi-add-table-title {
+    text-transform: uppercase;
+    font-size: $sc-base-font-size;
+    border-width: 1px !important;
+}
+.matrix-multi-add-table-column-heading {
+    min-width: 106px;
+    text-align: center;
+    border-width: 1px !important;
+}
+.matrix-multi-add-footer-subtotal {
+    display: inline-block;
+    font-weight: $sc-font-weight-bold;
+    font-size: $sc-h4-font-size;
+    color: $sc-color-copy;
+}
+.matrix-multi-add-footer {
+    @extend .row;
+    padding-top: $sc-base-padding * 2;
+}
+.matrix-multi-add-footer-error {
+    @extend .col-md-6;
+}
+.matrix-multi-add-error-text {
+    @extend .global-views-message;
+    @extend .global-views-message-error;
+    .alert {
+        padding: $alert-padding;
+        margin-bottom: $line-height-computed;
+        border: 1px solid transparent;
+        border-radius: $alert-border-radius;
+      // Headings for larger alerts
+        h4 {
+            margin-top: 0;
+            // Specified for the h4 to prevent conflicts of changing $headings-color
+            color: inherit;
+        }
+      // Provide class for links that match alerts
+        .alert-link {
+            font-weight: $alert-link-font-weight;
+        }
+      // Improve alignment and spacing of inner content
+        > p,
+        > ul {
+            margin-bottom: 0;
+        }
+        > p + p {
+            margin-top: 5px;
+        }
+    }
+    /*border: 1px solid $sc-color-error;
+    color: $sc-color-error;
+    margin-top: $sc-base-margin * 3;
+    padding: $sc-base-padding;*/
+}
+.matrix-multi-add-footer-action {
+    @extend .col-md-6;
+    text-align: right;
+}
+.matrix-multi-add-button {
+    @extend .button-primary;
+    @extend .button-large;
+    margin: 0 0 0 $sc-base-margin * 3;
+    font-weight: $sc-font-weight-semibold;
+    float: none;
+}
+.matrix-multi-add-thumb-image {
+    display:none;
+    @media (min-width: $screen-md-min) {
+        display: inline-block;
+        height: 60px;
+        min-width: 50px;
+        vertical-align: middle;
+        padding-left: $sc-base-padding * 2;
+    }
+}
+.matrix-multi-add-thumb-color {
+    display:none;
+    @media (min-width: $screen-md-min) {
+        display: block;
+        height: 40px;
+        width: 40px;
+        float: left;
+        margin-left: $sc-base-margin * 2;
+        margin-right: $sc-base-margin * 0.5;
+        border: 1px solid $sc-color-light-copy;
+    }
+}
+.matrix-multi-add-thumb-color + .matrix-multi-add-cols-label {
+    padding-top: $sc-base-padding * 2;
+    display: block;
+}
+.matrix-multi-add-cols-label {
+    font-size: $sc-base-font-size;
+    font-weight: $sc-font-weight-bold;
+    color: $sc-color-light-copy;
+    text-transform: capitalize;
+}
+.matrix-multi-add-quantity {
+    text-align: center;
+    vertical-align: middle !important;
+    color: $sc-color-light-copy;
+}
+.matrix-multi-add-not-available {
+    text-align: center;
+    vertical-align: middle !important;
+}
+.multi-add-to-cart-quantity-value {
+    height: $sc-target-size-mobile;
+    padding:$sc-base-margin * 2 $sc-base-padding * 3 $sc-base-margin * 2 $sc-base-padding * 3;
+    width: 90px;
+    text-align: right;
+    background-color: $sc-color-quantity-value;
+    border: 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+    font-weight:$sc-font-weight-normal;
+}
+
+.quantity-pricing-table-header{
+    font-weight: bold;
+}
+/* Insert these styles if showing a tile of the first matrix option
+.matrix-multi-add-option-added {
+    background-color: rgba(209, 211, 212, 0.5) !important;
+    opacity: 1;
+}
+.matrix-multi-add-tiles-container {
+    overflow: hidden;
+}
+.matrix-multi-add-tile {
+    float: left;
+    height: 70px;
+    min-width: 50px;
+    padding: $sc-base-padding;
+    position: relative;
+}
+ */

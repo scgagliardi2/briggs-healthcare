@@ -1,0 +1,15 @@
+.table-cms{
+    @media (max-width: $sc-mobile-landscape-width){
+        overflow-y: auto;
+    }
+}
+.table-cms .table {
+    @media (max-width: $sc-mobile-landscape-width){
+        width: 615px;
+    }
+}
+.table-cms .table th {
+    background: $sc-theme-color-primary;
+    color: $sc-theme-color-tertiary;
+    padding: $sc-base-padding*3 $sc-base-padding*2;
+}

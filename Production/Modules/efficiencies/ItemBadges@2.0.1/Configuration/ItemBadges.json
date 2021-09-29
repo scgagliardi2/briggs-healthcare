@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "itemBadges",
+    "title": "Item Badges",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "itemBadges.showInFacet": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "itemBadges",
+      "title": "Show Item Badges in Facet",
+      "default": true
+    },
+    "itemBadges.facetName": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "itemBadges",
+      "title": "Facet Title",
+      "default": "Badges"
+    }
+  }
+}

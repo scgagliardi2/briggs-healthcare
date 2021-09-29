@@ -1,0 +1,11 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/**/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Case@2.3.0/Sass/_case-list.scss": "Sass/_case-list.scss",
+        "suitecommerce/Case@2.3.0/Sass/_case-detail.scss": "Sass/_case-detail.scss"
+    }
+}

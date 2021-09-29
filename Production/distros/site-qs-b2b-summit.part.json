@@ -1,0 +1,54 @@
+{
+    "id": "site-qs-b2b-summit",
+    "name": "Site QS B2B - Summit Theme",
+    "dependencies": ["qs-b2b","ss-theme-summit-b2b"],
+    "endpoint": "true",
+    "modules": {
+
+    },
+    "tasksConfig": {
+        "javascript": [
+            {
+                "entryPoint": "SC.Shopping.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.MyAccount.Starter",
+                "dependencies": [
+
+                ]
+            },
+            {
+                "entryPoint": "SC.Checkout.Starter",
+                "dependencies": [
+
+                ]
+            }
+        ],
+        "ssp-libraries": {
+            "dependencies": [
+            ]
+        },
+        "sass": {
+            "applications": [
+                {
+                    "name": "Shopping",
+                    "dependencies": [
+                    ]
+                },
+                {
+                    "name": "MyAccount",
+                    "dependencies": [
+                    ]
+                },
+                {
+                    "name": "Checkout",
+                    "dependencies": [
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "quickStart.bTobExtensions.searchPlaceholderText": {
+            "group": "commerceSuiteSolution",
+            "subtab": "quickStart",
+            "type": "string",
+            "title": "Search bar placeholder text",
+            "description": "Placeholder text to display in search bar"
+        }
+    }
+}

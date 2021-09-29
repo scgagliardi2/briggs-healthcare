@@ -1,0 +1,27 @@
+1.0.0
+- Initial Release
+
+1.1.0
+- Configuration, per user, for hiding price and cart button
+
+1.2.0
+- Category filtering base on groups
+- Add caching in Model
+
+1.2.1
+- Exclude CustomerSegment Facet when customer is not login
+
+2.0.0
+- Elbrus Release
+
+2.0.1
+- Update distro dependencies
+
+2.0.2
+- Hide price configuration per group
+- Hide add to cart button configuration per group
+- Fixed conflict with customer segment banner carousel and themes carousel
+
+2.0.3
+- Fixed url issue with carousel banner image
+- Fixed error while submitting an item review

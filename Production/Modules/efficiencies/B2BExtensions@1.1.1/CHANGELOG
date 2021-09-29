@@ -1,0 +1,8 @@
+1.0.0
+- Initial Release (Elbrus)
+
+1.1.0
+- Move the configuration tab inside CommerceSuiteSolutions - Quickstart tab
+
+1.1.1
+- Fixed issue: placeholder text is not removed when typing in the bo

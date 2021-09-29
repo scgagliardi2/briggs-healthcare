@@ -1,0 +1,21 @@
+1.0.0
+- Initial Release
+
+ 1.1.0
+  - Vinson Release
+ - Migrate configuration to vinson
+
+2.0.0
+- Elbrus Release
+- eslint fix
+
+2.1.0
+- Create "Show More Detail" toggle link per row
+- Added quantity available in details
+- make compatible with back in stock notification module
+
+2.1.1
+- Fix: Don't show Out of stock message if item's 'Out of Stock Behavior' is set to '- Default -'
+
+2.1.2
+- Update distro dependencies

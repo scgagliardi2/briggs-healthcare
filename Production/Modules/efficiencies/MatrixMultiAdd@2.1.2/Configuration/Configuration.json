@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "matrixMultiAddtoCart",
+    "title": "Matrix Multi Add To Cart",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "matrixMultiAddtoCart.color": {
+      "group": "commerceSuiteSolution",
+      "type": "array",
+      "subtab": "matrixMultiAddtoCart",
+      "title": "Matrix Multi Add To Cart Custom Row Attribute",
+      "description": "Matrix Multi Add To Cart Config",
+      "items": {
+        "type": "object",
+        "properties": {
+          "colorsname" : {
+            "type": "string",
+            "title": "Attribute Name",
+            "description": ""
+          },
+          "hex" : {
+            "type": "string",
+            "title": "Value",
+            "description": ""
+          }
+        }
+      },
+      "default": [
+        {
+          "colorsname": "black",
+          "hex": "#212121"
+        }
+      ]
+    },
+    "matrixMultiAddtoCart.fields": {
+      "group": "commerceSuiteSolution",
+      "type": "array",
+      "subtab": "matrixMultiAddtoCart",
+      "title": "Matrix Multi Add To Cart Item Fields",
+      "description": "Matrix Multi Add To Cart Config",
+      "items": {
+        "type": "object",
+        "properties": {
+          "columnFieldsID" : {
+            "type": "string",
+            "title": "Column Fields",
+            "description": ""
+          },
+          "rowsFieldIds" : {
+            "type": "string",
+            "title": "Row Fields",
+            "description": ""
+          }
+        }
+      },
+      "default": [
+        {
+          "columnFieldsID": "custcol4",
+          "rowsFieldIds": ""
+        }
+      ]
+    },
+    "matrixMultiAddtoCart.siteWide": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "matrixMultiAddtoCart",
+      "title": "Site Wide",
+      "default": false
+    }
+  }
+}

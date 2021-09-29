@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "googleCustomerReviews",
+    "title": "Google Customer Reviews",
+    "group": "commerceSuiteSolution"
+  },
+  "properties": {
+    "googleCustomerReviews.showBadge": {
+      "group": "commerceSuiteSolution",
+      "type": "boolean",
+      "subtab": "googleCustomerReviews",
+      "title": "Show Badge",
+      "description": "Check this field to show badge",
+      "default": true
+    },
+    "googleCustomerReviews.merchantId": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleCustomerReviews",
+      "title": "Merchant ID",
+      "description": "This field must be populated with the client's Google Merchant Center ",
+      "mandatory": true
+    },
+    "googleCustomerReviews.position": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleCustomerReviews",
+      "title": "Badge Position",
+      "description": "Renders the badge in one of the following locations: 'BOTTOM_RIGHT' : Causes the badge to float in the bottom right of the page. 'BOTTOM_LEFT': Causes the badge to float in the bottom left of the page. 'INLINE': Renders the badge in the place in which the code appears. When using this option, be sure that other elements on the page do not block or obscure the badge.",
+      "default": "BOTTOM_RIGHT"
+    },
+    "googleCustomerReviews.estimatedDeliveryDate": {
+      "group": "commerceSuiteSolution",
+      "type": "integer",
+      "subtab": "googleCustomerReviews",
+      "title": "Estimated number of days to be deliver",
+      "default": 7
+    },
+    "googleCustomerReviews.optInStyle": {
+      "group": "commerceSuiteSolution",
+      "type": "string",
+      "subtab": "googleCustomerReviews",
+      "title": "OPT IN STYLE",
+      "description": "Specifies how the opt-in module's dialog box is displayed. Possible values are: 'CENTER_DIALOG': Displayed as a dialog box in the center of the view. 'BOTTOM_RIGHT_DIALOG': Displayed as a dialog box at the bottom right of the view. 'BOTTOM_LEFT_DIALOG': Displayed as a dialog box at the bottom left of the view. 'TOP_RIGHT_DIALOG': Displayed as a dialog box at the top right of the view. 'TOP_LEFT_DIALOG': Displayed as a dialog box at the top left of the view. 'BOTTOM_TRAY': Displayed in the bottom",
+      "default": "CENTER_DIALOG"
+    }
+  }
+}
+

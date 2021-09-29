@@ -1,0 +1,10 @@
+{
+    "gulp": {
+        "sass": [
+            "Sass/*.scss"
+        ]
+    },
+    "overrides": {
+        "suitecommerce/Balance@2.1.2/Sass/_balance.scss": "Sass/_balance.scss"
+    }
+}
