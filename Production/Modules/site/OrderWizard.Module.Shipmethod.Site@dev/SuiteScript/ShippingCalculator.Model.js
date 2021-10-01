@@ -12,9 +12,10 @@ define("ShippingCalculator.Model", [
       var shippingRate;
 
       var customFields = customFieldsParser(customer.getCustomFieldValues());
+	  //nlapiLogExecution('DEBUG', 'zone Code', JSON.stringify(customFields));
       var zoneCode = JSON.parse(customFields.custentityzone_code);
 
-      nlapiLogExecution("DEBUG", "zone Code", JSON.stringify(customFields));
+      nlapiLogExecution("DEBUG", "zone Code", zoneCode);
 	  
 
       var filters = [];

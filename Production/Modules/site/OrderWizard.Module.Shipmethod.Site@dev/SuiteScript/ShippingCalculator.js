@@ -20,7 +20,7 @@ define("ShippingCalculator", [
         Utils.formatCurrency(shippingCost);
 		
 	
-	if(Utils.isInCheckout()){
+	if(Utils.isInCheckout(request)){
 		response.options.custbody_ag_shipping_cost_custom = String(response.summary.shippingcost);
 	}
 
