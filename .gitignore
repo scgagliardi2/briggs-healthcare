@@ -1,7 +1,21 @@
-node_modules
-Site QS B2B - Summit Theme-2019-03-05T15-23-45.627Z.zip.001
-Site QS B2B - Summit Theme-2019-03-05T15-23-45.627Z.zip.002
-default.sublime-project
-release.xml
-version.txt
-bin
+**/.nsdeploy
+**/payload.json
+**/DeployDistribution/
+**/LocalDistribution/
+**/node_modules
+**/.idea/
+**/scratchpad/
+**/npm-debug.log
+**/temp/
+**/package-lock.json
+**/tmp
+**/.jshintrc
+**/javascript-libs.js
+**/Modules/extensions/_template/
+**/Modules/custom/CodeInspector/
+**/.yo-rc.json
+**/.DS_Store
+**/SuiteCommerce_Help.md
+**/.vscode/settings.json
+Theme/Workspace/Suite_Commerce_Base_Theme/manifest.json
+Theme/Workspace/Horizon/manifest.json
